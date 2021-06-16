@@ -12,7 +12,7 @@ import yaml
 load_dotenv(dotenv_path="config")
 
 bot = commands.Bot(command_prefix="*")
-valid_user = ["Yot#7962"]
+valid_user = ["yourUser#1234"]
 text = discord.Embed()
 
 def to_lower(argument):
@@ -56,6 +56,30 @@ async def list(ctx):
         if extension in file.lower():
             search_result = search_result+'\n'+file
     await ctx.send(search_result)
+
+
+@bot.command(name='request')
+async def request(ctx):
+    dev = await bot.fetch_user(0000000000000000)
+    author = ctx.message.author
+    content = ctx.message.content
+    with open('names.txt', 'r') as f:
+        if str(author) in f.read():
+            await ctx.send("Please wait another 2 hours before retrying")
+            await sleep(7200)
+            lines = f.readlines()
+            with open('names.txt', 'w') as f:
+                #if str(author) in f.read():
+                for line in lines:
+                    if line.strip("\n") != str(author):
+                        f.write(line)
+        else:
+            await ctx.send("Link sent!")
+            await dev.send(f"**{content}** sent from {author}")
+            names = open("names.txt", "a")
+            names.write(str(author)+"\n")
+            names.close()
+
 
 @bot.command(name='added')
 async def added(ctx, arg, member: discord.Member = None):
