@@ -4,13 +4,11 @@
 from asyncio.tasks import sleep
 from logging import error
 import os
-from os import listdir, path, write
+from os import listdir
 import discord
-from discord import message
 from discord.ext import commands
 from dotenv import load_dotenv
-import json
-import yaml
+import yaml, json
 
 load_dotenv(dotenv_path="config")
 
