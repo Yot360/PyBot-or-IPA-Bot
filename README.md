@@ -6,5 +6,5 @@ Add the bot with this link :
 https://pybot.yot-dev.ml/
 
 ## Help
-To get help just run `*help`, you can also get help about a command with `*help <command>`.
+To get help just send `*help`, you can also get help about a command with `*help <command>`.
 
