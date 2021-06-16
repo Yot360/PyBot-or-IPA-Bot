@@ -15,7 +15,7 @@ import yaml
 load_dotenv(dotenv_path="config")
 
 bot = commands.Bot(command_prefix="*")
-valid_user = ["yourUser#1234"]
+valid_user = ["Yot#7962"]
 text = discord.Embed()
 
 def to_lower(argument):
@@ -63,7 +63,7 @@ async def list(ctx):
 
 @bot.command(name='request')
 async def request(ctx):
-    dev = await bot.fetch_user(0000000000000000)
+    dev = await bot.fetch_user(544996240891445269)
     author = ctx.message.author
     content = ctx.message.content
     with open('names.txt', 'r') as f:
