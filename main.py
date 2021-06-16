@@ -1,3 +1,6 @@
+#FROM YOT @Yot360
+#MY WEBSITE : https://yot-dev.ml
+
 from asyncio.tasks import sleep
 from logging import error
 import os
