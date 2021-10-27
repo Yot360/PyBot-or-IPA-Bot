@@ -1,3 +1,5 @@
+# Files are outdated only invite the bot with the link below, don't build it yourself
+
 # PyBot-or-IPA-Bot
 A bot I made in python, to easily download IPA for your iOS device!
 
